@@ -11,13 +11,23 @@
 |
 */
 
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/home', 'UserController@index')
+        ->name('home');
+
+    Route::group(['middleware' => ['administrator']], function () {
+        Route::get('/list-users', 'UserController@listUser')
+            ->name('list');
+    });
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
 
 Auth::routes();
 
-Route::get('home', 'HomeController@index')->name('home');
+// Route::get('home', 'HomeController@index')->name('home');
 
 Route::get('auth/{provider}', 'Auth\SocialAccountController@redirectToProvider');
 Route::get('auth/{provider}/callback', 'Auth\SocialAccountController@handleProviderCallback');

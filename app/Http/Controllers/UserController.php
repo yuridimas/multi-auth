@@ -4,27 +4,20 @@ namespace App\Http\Controllers;
 
 use App\User;
 use App\SocialAccount;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class HomeController extends Controller
+class UserController extends Controller
 {
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
     public function index()
     {
-        $allUsers = User::all();
-        
-        $user = User::where('id', Auth::id())
+        $userId = Auth::id();
+
+        $user = User::where('id', $userId)
             ->first();
-            
+
         $socialGoogle = SocialAccount::google()
             ->first();
-        
+
         $socialFacebook = SocialAccount::facebook()
             ->first();
 
@@ -32,8 +25,15 @@ class HomeController extends Controller
             ->with([
                 'socialGoogle' => $socialGoogle,
                 'socialFacebook' => $socialFacebook,
-                'allUsers' => $allUsers,
                 'user' => $user,
             ]);
+    }
+
+    public function listUser()
+    {
+        $users = User::all();
+
+        return view('list_users')
+            ->with('users', $users);
     }
 }

@@ -84,12 +84,14 @@
                     Laravel Socialite
                 </div>
 
-                Buat konfigurasinya disini dulu
+                Link Konfigurasi & Refrensi
                 <hr>
                 <div class="links">
                     <a href="https://developers.google.com/" target="_blank">Google</a>
                     <a href="https://developers.facebook.com/?locale=id_ID" target="_blank">Facebook</a>
-                    <a href="https://www.itsolutionstuff.com/post/laravel-6-socialite-login-with-google-gmail-accountexample.html" target="_blank">Refrensi</a>
+                    <a href="https://www.itsolutionstuff.com/post/laravel-6-socialite-login-with-google-gmail-accountexample.html" target="_blank">Refrensi 1</a>
+                    <a href="https://medium.com/@Alabuja/social-login-in-laravel-with-socialite-90dbf14ee0ab" target="_blank">Refrensi 2</a>
+                    <a href="https://medium.com/@kiddy.xyz/tutorial-login-laravel-dengan-socialite-facebook-twitter-google-github-linkedin-5743fb97fa2b" target="_blank">Refrensi 3</a>
                 </div>
             </div>
         </div>

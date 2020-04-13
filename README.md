@@ -9,4 +9,8 @@
 7. tambahkan `GOOGLE_ID`,`GOOGLE_SECRET`,`GOOGLE_URL` dan `FACEBOOK_ID`, `FACEBOOK_SECRET`, `FACEBOOK_URL` di file `.env`
 8. jalankan `php artisan:migrate --seed`
 
-Selamat mencoba!
+### Akun Admin
+- Email: `dalgona@gmail.com`
+- Password: `password`
+
+## Selamat mencoba!

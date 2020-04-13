@@ -1,16 +1,14 @@
 ## Laravel 6 Multi-Auth using Socialite
 
-1. `clone` dulu projectnya
-2. jalankan `composer install`
-3. jalankan `npm install` & `npm run dev`
-4. Copy Paste file `.env.example` menjadi `.env`
-5. jalankan `php artisan key:generate`
-6. konfigurasi `.env`
-7. tambahkan `GOOGLE_ID`,`GOOGLE_SECRET`,`GOOGLE_URL` dan `FACEBOOK_ID`, `FACEBOOK_SECRET`, `FACEBOOK_URL` di file `.env`
-8. jalankan `php artisan:migrate --seed`
+1. jalankan `composer install`
+2. jalankan `npm install` & `npm run dev`
+3. Copy Paste file `.env.example` menjadi `.env`
+4. jalankan `php artisan key:generate`
+5. konfigurasi `.env`
+6. jalankan `php artisan migrate:fresh --seed`
 
 ### Akun Admin
 - Email: `dalgona@gmail.com`
 - Password: `password`
 
-## Selamat mencoba!
+### Selamat mencoba!

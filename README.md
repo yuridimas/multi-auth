@@ -10,3 +10,4 @@
 8. jalankan `php artisan:migrate --seed`
 
 Selamat mencoba
+Selamat mencoba

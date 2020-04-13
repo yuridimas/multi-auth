@@ -37,7 +37,16 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        @auth
+                        <li class="nav-item">
+                            <a href="{{ route('home') }}" class="nav-link">Profile</a>
+                        </li>
+                        @if (Auth::user()->is_admin == 1)
+                        <li class="nav-item">
+                            <a href="{{ route('list') }}" class="nav-link">Users</a>
+                        </li>
+                        @endif
+                        @endauth
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -82,10 +91,5 @@
         </main>
     </div>
 </body>
-<script>
-    if ("{{ Session::has('error') }}") {
-        toastr.error("{{Session::get('error')}}");
-    }
-</script>
 
 </html>
